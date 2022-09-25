@@ -3,7 +3,7 @@ name: Update indicators into Google Sheets
     workflow_dispatch: null
     push:
         branches:
-            - main
+            - feature
     schedule:
         - cron: 0 8-13/5 * * 1-5
 env:
