@@ -1,9 +1,8 @@
 const axios = require("axios");
 
 /**
- * It makes a request to the API, and returns the data in a matrix format
- * matrix format is an array of arrays and is the format that the Google Sheets API expects
- * @returns An array of arrays.
+ * It makes a request to the API, and returns a matrix of the data
+ * @returns An object with the data from the API.
  */
 const getData = async () => {
     try {
@@ -11,11 +10,7 @@ const getData = async () => {
             "https://economic-api.cam1pozas.xyz/api"
         );
         const data = response.data;
-        const dataMatrix = [];
-        for (const key in data) {
-            dataMatrix.push([key, data[key]]);
-        }
-        return dataMatrix;
+        return data;
     } catch (error) {
         console.error(error);
     }
