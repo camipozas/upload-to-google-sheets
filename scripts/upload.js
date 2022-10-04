@@ -6,7 +6,6 @@ const { google } = require("googleapis");
 const sheets = google.sheets("v4");
 
 const SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
-const CREDENTIALS_PATH = path.join(process.cwd(), "credentials.json");
 
 /**
  * Load or request or authorization to call APIs.
@@ -14,7 +13,7 @@ const CREDENTIALS_PATH = path.join(process.cwd(), "credentials.json");
  */
 async function authorize() {
     const auth = new google.auth.GoogleAuth({
-        keyFile: CREDENTIALS_PATH, //the key file
+        credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT),
         //url to spreadsheets API
         scopes: SCOPES,
     });
