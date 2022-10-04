@@ -20,7 +20,4 @@ jobs:
               with:
                   node-version: 16
             - run: npm install
-              working-directory: ./package.json # This is the path to the folder where the package.json is located
             - run: npm run start
-              working-directory: ./package.json # This is the path to the folder where the package.json is located
-
