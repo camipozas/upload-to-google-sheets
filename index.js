@@ -10,12 +10,14 @@ const updateValues = require("./scripts/upload");
  */
 // TODO: Change code below to process your data.
 const transformData = (data) => {
-    const dataValues = [["currency", "value", "date"]];
-    for (const key in data) {
-        const { Valor, Fecha } = data[key];
-        dataValues.push([key, Valor, Fecha]);
-    }
-    return dataValues;
+  const tableHeader = ["currency", "value", "date"];
+  // add table header as first row of range
+  const dataValues = [tableHeader];
+  for (const key in data) {
+    const { Valor, Fecha } = data[key];
+    dataValues.push([key, Valor, Fecha]);
+  }
+  return dataValues;
 };
 
 /**
@@ -23,12 +25,12 @@ const transformData = (data) => {
  * updates the spreadsheet with the new data
  */
 const main = async () => {
-    const data = await getData();
-    const dataValues = transformData(data);
-    // TODO: Change the sheet ID and range to match your spreadsheet.
-    await updateValues(process.env.SHEET_ID, process.env.SHEET_RANGE, {
-        values: dataValues,
-    });
+  const data = await getData();
+  const dataValues = transformData(data);
+  // TODO: Change the sheet ID and range to match your spreadsheet.
+  await updateValues(process.env.SHEET_ID, process.env.SHEET_RANGE, {
+    values: dataValues,
+  });
 };
 
 main();
