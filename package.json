@@ -1,0 +1,27 @@
+{
+  "name": "upload-to-google-sheets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2",
+    "googleapis": "^105.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camipozas/upload-to-google-sheets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camipozas/upload-to-google-sheets/issues"
+  },
+  "homepage": "https://github.com/camipozas/upload-to-google-sheets#readme"
+}
