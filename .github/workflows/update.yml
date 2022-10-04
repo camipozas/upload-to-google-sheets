@@ -9,6 +9,8 @@ name: Update indicators into Google Sheets
 env:
     SHEET_ID: "${{secrets.SHEET_ID}}"
     SHEET_RANGE: "${{secrets.SHEET_RANGE}}"
+    GOOGLE_SERVICE_ACCOUNT: "${{secrets.GOOGLE_SERVICE_ACCOUNT}}"
+
 jobs:
     upload:
         runs-on: ubuntu-latest
