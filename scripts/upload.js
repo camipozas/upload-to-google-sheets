@@ -7,6 +7,12 @@ const sheets = google.sheets("v4");
 
 const SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
 
+/**
+ * It takes a string of JSON and returns a JSON object
+ * @param stringJson - The stringified JSON object that you want to parse.
+ * @param secretName - The name of the secret you want to retrieve.
+ * @returns the parsed JSON object.
+ */
 const parseJsonSecret = (stringJson, secretName) => {
     try {
         const json = JSON.parse(stringJson);
@@ -15,6 +21,7 @@ const parseJsonSecret = (stringJson, secretName) => {
         console.log(secretName, error);
     }
 };
+
 /**
  * Load or request or authorization to call APIs.
  *
