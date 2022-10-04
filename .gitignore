@@ -108,3 +108,6 @@ credentials.json
 
 # Package-lock.json
 package-lock.json
+
+# Vscode
+.vscode
