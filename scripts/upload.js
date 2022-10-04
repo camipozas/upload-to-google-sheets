@@ -7,13 +7,24 @@ const sheets = google.sheets("v4");
 
 const SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
 
+const parseJsonSecret = (stringJson, secretName) => {
+    try {
+        const json = JSON.parse(stringJson);
+        return json;
+    } catch (error) {
+        console.log(secretName, error);
+    }
+};
 /**
  * Load or request or authorization to call APIs.
  *
  */
 async function authorize() {
     const auth = new google.auth.GoogleAuth({
-        credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT),
+        credentials: parseJsonSecret(
+            process.env.GOOGLE_SERVICE_ACCOUNT,
+            "GOOGLE_CREDENTIALS"
+        ),
         //url to spreadsheets API
         scopes: SCOPES,
     });
