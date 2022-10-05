@@ -5,7 +5,7 @@ name: Update indicators into Google Sheets
         branches:
             - main
     schedule:
-        - cron: 0 8-13/5 * * 1-5
+        - cron: 0 8-13/5 * * 1-5 # every 5 hours between 8am and 1pm UTC - You can change this to your preferred schedule
 env:
     SHEET_ID: "${{secrets.SHEET_ID}}"
     SHEET_RANGE: "${{secrets.SHEET_RANGE}}"
