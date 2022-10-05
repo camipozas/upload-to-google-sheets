@@ -19,7 +19,6 @@ SHEET_RANGE=YOUR_SHEET_RANGE_HERE
 5. Google gives to you an google service account email. You have to share your google sheet with this email. See [this guide](https://support.google.com/a/answer/7378726?hl=en) for more information.
 6. Finally, you have to set your preferences to run it automatically with GitHub Actions, you must do this in the file `.github/workflows/update.yml`.
 
-```
 ## Example
 
 1. I work with this [API](https://economic-api.cam1pozas.xyz/api) to get data from CMF Chilean Indicators. You can use any API you want.
