@@ -44,6 +44,6 @@ SHEET_RANGE=YOUR_SHEET_RANGE_HERE
 
 ## Contributors
 
-<a href = "https://github.com/Tanu-N-Prabhu/Python/graphs/contributors">
+<a href = "https://github.com/camipozas/upload-to-google-sheets/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo=camipozas/upload-to-google-sheets"/>
 </a>
