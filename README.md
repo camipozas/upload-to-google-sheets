@@ -16,8 +16,9 @@ SHEET_ID=YOUR_SHEET_ID_HERE
 SHEET_RANGE=YOUR_SHEET_RANGE_HERE
 ```
 
-5. Google gives to you an google service account email. You have to share your google sheet with this email. See [this guide](https://support.google.com/a/answer/7378726?hl=en) for more information.
-6. Finally, you have to set your preferences to run it automatically with GitHub Actions, you must do this in the file `.github/workflows/update.yml`.
+5. Set the credentials in Secrets repository in GitHub. See [this guide](https://docs.github.com/en/actions/reference/encrypted-secrets) for more information.
+6. Google gives to you an google service account email. You have to share your google sheet with this email. See [this guide](https://support.google.com/a/answer/7378726?hl=en) for more information.
+7. Finally, you have to set your preferences to run it automatically with GitHub Actions, you must do this in the file `.github/workflows/update.yml`.
 
 ## Example
 
